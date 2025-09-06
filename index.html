@@ -3,40 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML-Projects</title>
+    <title>ML Projects Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 min-h-screen py-12">
-    <div class="container mx-auto px-4">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-2">Welcome to My ML Projects</h1>
-            <p class="text-gray-600">Exploring Machine Learning Through Practice</p>
-        </header>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen font-inter">
+    <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">ML Portfolio</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#datasets" class="text-gray-600 hover:text-blue-600 transition-colors">Datasets</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <section class="mb-16">
-            <h2 class="text-2xl font-semibold text-gray-800 text-center mb-8">Projects</h2>
+    <section class="pt-24 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                        Machine Learning
+                    </span>
+                    <br>
+                    <span class="text-gray-800">Projects Portfolio</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Exploring the fascinating world of machine learning through hands-on projects and real-world datasets
+                </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="carPricePrediction.ipynb" class="project-link">Car Price Prediction</a>
-                <a href="Rock_Vs_Mine_Prediction.ipynb" class="project-link">Rock Vs Mine Prediction</a>
-                <a href="Titanic_Survival_Prediction.ipynb" class="project-link">Titanic Survival Prediction</a>
-                <a href="WineQualityPrediction.ipynb" class="project-link">Wine Quality Prediction</a>
-                <a href="stockPricePrediction.ipynb" class="project-link">Stock Price Prediction</a>
+                    <div class="flex items-center space-x-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2 border border-gray-200/50">
+                        <i class="fas fa-chart-line text-blue-600"></i>
+                        <span class="text-gray-700">13 Projects</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2 border border-gray-200/50">
+                        <i class="fas fa-database text-purple-600"></i>
+                        <span class="text-gray-700">5 Datasets</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2 border border-gray-200/50">
+                        <i class="fas fa-code text-indigo-600"></i>
+                        <span class="text-gray-700">Jupyter Notebooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Dive into my machine learning projects covering various domains from finance to healthcare
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-car text-blue-600"></i>
+                    </div>
+                    <h3 class="project-title">Car Price Prediction</h3>
+                    <p class="project-description">Predict car prices using regression algorithms and feature engineering</p>
+                    <a href="carPricePrediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-mountain text-green-600"></i>
+                    </div>
+                    <h3 class="project-title">Rock vs Mine Prediction</h3>
+                    <p class="project-description">Sonar data classification to distinguish between rocks and mines</p>
+                    <a href="Rock_Vs_Mine_Prediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-ship text-red-600"></i>
+                    </div>
+                    <h3 class="project-title">Titanic Survival Prediction</h3>
+                    <p class="project-description">Classic ML problem predicting passenger survival on the Titanic</p>
+                    <a href="Titanic_Survival_Prediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-wine-glass text-purple-600"></i>
+                    </div>
+                    <h3 class="project-title">Wine Quality Prediction</h3>
+                    <p class="project-description">Analyze wine characteristics to predict quality ratings</p>
+                    <a href="WineQualityPrediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line text-orange-600"></i>
+                    </div>
+                    <h3 class="project-title">Stock Price Prediction</h3>
+                    <p class="project-description">Time series analysis for predicting Tesla stock prices</p>
+                    <a href="stockPricePrediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-film text-indigo-600"></i>
+                    </div>
+                    <h3 class="project-title">Movie Recommendation System</h3>
+                    <p class="project-description">Collaborative filtering system for personalized movie recommendations</p>
+                    <a href="Movie_Recommendation_System.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-sms text-pink-600"></i>
+                    </div>
+                    <h3 class="project-title">Swahili Spam SMS Prediction</h3>
+                    <p class="project-description">Natural language processing for Swahili spam detection in SMS messages</p>
+                    <a href="Swahili_Spam_Sms_Prediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-eye text-cyan-600"></i>
+                    </div>
+                    <h3 class="project-title">Improved SSD</h3>
+                    <p class="project-description">Enhanced Single Shot Detector for object detection and recognition</p>
+                    <a href="ImprovedSSD.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-receipt text-emerald-600"></i>
+                    </div>
+                    <h3 class="project-title">Expenses Categorization</h3>
+                    <p class="project-description">Machine learning model for automatic expense categorization and budgeting</p>
+                    <a href="ExpensesCategorization.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator text-teal-600"></i>
+                    </div>
+                    <h3 class="project-title">Expense Categorization 2</h3>
+                    <p class="project-description">Advanced expense categorization with improved accuracy and features</p>
+                    <a href="ExpenseCategorization2.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-heartbeat text-rose-600"></i>
+                    </div>
+                    <h3 class="project-title">Diabetes Prediction</h3>
+                    <p class="project-description">Medical diagnosis model for early diabetes detection using health indicators</p>
+                    <a href="DiabetesPrediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-shopping-cart text-amber-600"></i>
+                    </div>
+                    <h3 class="project-title">BigMart Sales Prediction</h3>
+                    <p class="project-description">Retail sales forecasting model for BigMart store performance optimization</p>
+                    <a href="BigMartSalesPrediction.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card group">
+                    <div class="project-icon">
+                        <i class="fas fa-home text-slate-600"></i>
+                    </div>
+                    <h3 class="project-title">Housing Price Prediction</h3>
+                    <p class="project-description">Real estate price prediction using housing market data and features</p>
+                    <a href="HandsonBook/housing.ipynb" class="project-link">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
             </div>
         </section>
 
-        <hr class="border-gray-200 my-12">
+    <section id="datasets" class="py-16 bg-white/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Datasets</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    High-quality datasets used across various machine learning projects
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div class="dataset-card group">
+                    <div class="dataset-icon">
+                        <i class="fas fa-file-csv text-blue-600"></i>
+                    </div>
+                    <div class="dataset-content">
+                        <h3 class="dataset-title">Car Data</h3>
+                        <p class="dataset-description">Automotive specifications and pricing data</p>
+                    </div>
+                    <a href="Datasets/car data.csv" class="dataset-link">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
 
-        <section>
-            <h2 class="text-2xl font-semibold text-gray-800 text-center mb-8">Datasets</h2>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="Datasets/car data.csv" class="dataset-link">Car Data</a>
-                <a href="Datasets/sonar_data.csv" class="dataset-link">Sonar Data</a>
-                <a href="Datasets/train.csv" class="dataset-link">Titanic Data</a>
-                <a href="Datasets/winequality-red.csv" class="dataset-link">Wine Data</a>
-                <a href="Datasets/Tesla.csv" class="dataset-link">Tesla Stock Data</a>
+                <div class="dataset-card group">
+                    <div class="dataset-icon">
+                        <i class="fas fa-file-csv text-green-600"></i>
+                    </div>
+                    <div class="dataset-content">
+                        <h3 class="dataset-title">Sonar Data</h3>
+                        <p class="dataset-description">Sonar signals for rock vs mine classification</p>
+                    </div>
+                    <a href="Datasets/sonar_data.csv" class="dataset-link">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="dataset-card group">
+                    <div class="dataset-icon">
+                        <i class="fas fa-file-csv text-red-600"></i>
+                    </div>
+                    <div class="dataset-content">
+                        <h3 class="dataset-title">Titanic Data</h3>
+                        <p class="dataset-description">Passenger information from the Titanic disaster</p>
+                    </div>
+                    <a href="Datasets/train.csv" class="dataset-link">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="dataset-card group">
+                    <div class="dataset-icon">
+                        <i class="fas fa-file-csv text-purple-600"></i>
+                    </div>
+                    <div class="dataset-content">
+                        <h3 class="dataset-title">Wine Data</h3>
+                        <p class="dataset-description">Red wine quality measurements and ratings</p>
+                    </div>
+                    <a href="Datasets/winequality-red.csv" class="dataset-link">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="dataset-card group">
+                    <div class="dataset-icon">
+                        <i class="fas fa-file-csv text-orange-600"></i>
+                    </div>
+                    <div class="dataset-content">
+                        <h3 class="dataset-title">Tesla Stock Data</h3>
+                        <p class="dataset-description">Historical Tesla stock price and volume data</p>
+                    </div>
+                    <a href="Datasets/Tesla.csv" class="dataset-link">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About This Portfolio</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    This portfolio showcases a collection of machine learning projects that demonstrate various techniques 
+                    and algorithms across different domains. Each project includes detailed analysis, visualizations, 
+                    and insights gained from working with real-world datasets.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-python text-blue-600 text-xl"></i>
+                        <span class="text-gray-700">Python</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chart-bar text-green-600 text-xl"></i>
+                        <span class="text-gray-700">Data Analysis</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-robot text-purple-600 text-xl"></i>
+                        <span class="text-gray-700">Machine Learning</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-eye text-indigo-600 text-xl"></i>
+                        <span class="text-gray-700">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                © 2024 ML Projects Portfolio. Built with passion for machine learning.
+            </p>
     </div>
+    </footer>
 </body>
 </html>
