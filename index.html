@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Projects Portfolio</title>
+    <title>ML Projects Portfolio | Machine Learning & Data Science Projects</title>
+    <meta name="description" content="Comprehensive portfolio showcasing 13+ machine learning projects including predictive analytics, NLP, computer vision, and data science applications. Explore real-world ML solutions and datasets.">
+    <meta name="keywords" content="machine learning, data science, AI, predictive analytics, NLP, computer vision, portfolio, projects, Python, Jupyter">
+    <meta name="author" content="kibali-cell">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kibali-cell.github.io/ML-Projects/">
+    <meta property="og:title" content="ML Projects Portfolio | Machine Learning & Data Science">
+    <meta property="og:description" content="Explore 13+ comprehensive machine learning projects covering predictive analytics, NLP, computer vision, and more. Real-world applications with code and datasets.">
+    <meta property="og:image" content="https://kibali-cell.github.io/ML-Projects/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kibali-cell.github.io/ML-Projects/">
+    <meta property="twitter:title" content="ML Projects Portfolio | Machine Learning & Data Science">
+    <meta property="twitter:description" content="Explore 13+ comprehensive machine learning projects covering predictive analytics, NLP, computer vision, and more.">
+    <meta property="twitter:image" content="https://kibali-cell.github.io/ML-Projects/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "kibali-cell",
+        "url": "https://github.com/kibali-cell",
+        "sameAs": [
+            "https://github.com/kibali-cell/ML-Projects"
+        ],
+        "knowsAbout": [
+            "Machine Learning",
+            "Data Science",
+            "Python",
+            "Artificial Intelligence",
+            "Predictive Analytics"
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen font-inter">
     <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
@@ -21,10 +67,22 @@
                     </div>
                     <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">ML Portfolio</span>
                 </div>
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
                     <a href="#datasets" class="text-gray-600 hover:text-blue-600 transition-colors">Datasets</a>
                     <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                    <button id="dark-mode-toggle" class="text-gray-600 hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-gray-100 dark-mode-toggle">
+                        <i class="fas fa-moon" id="dark-mode-icon"></i>
+                    </button>
+                    <a href="https://github.com/kibali-cell/ML-Projects" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -77,7 +135,7 @@
                     </div>
                     <h3 class="project-title">Car Price Prediction</h3>
                     <p class="project-description">Predict car prices using regression algorithms and feature engineering</p>
-                    <a href="carPricePrediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/carPricePrediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -89,7 +147,7 @@
                     </div>
                     <h3 class="project-title">Rock vs Mine Prediction</h3>
                     <p class="project-description">Sonar data classification to distinguish between rocks and mines</p>
-                    <a href="Rock_Vs_Mine_Prediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Rock_Vs_Mine_Prediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -101,7 +159,7 @@
                     </div>
                     <h3 class="project-title">Titanic Survival Prediction</h3>
                     <p class="project-description">Classic ML problem predicting passenger survival on the Titanic</p>
-                    <a href="Titanic_Survival_Prediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Titanic_Survival_Prediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -113,7 +171,7 @@
                     </div>
                     <h3 class="project-title">Wine Quality Prediction</h3>
                     <p class="project-description">Analyze wine characteristics to predict quality ratings</p>
-                    <a href="WineQualityPrediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/WineQualityPrediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -125,7 +183,7 @@
                     </div>
                     <h3 class="project-title">Stock Price Prediction</h3>
                     <p class="project-description">Time series analysis for predicting Tesla stock prices</p>
-                    <a href="stockPricePrediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/stockPricePrediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -137,7 +195,7 @@
                     </div>
                     <h3 class="project-title">Movie Recommendation System</h3>
                     <p class="project-description">Collaborative filtering system for personalized movie recommendations</p>
-                    <a href="Movie_Recommendation_System.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Movie_Recommendation_System.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -149,7 +207,7 @@
                     </div>
                     <h3 class="project-title">Swahili Spam SMS Prediction</h3>
                     <p class="project-description">Natural language processing for Swahili spam detection in SMS messages</p>
-                    <a href="Swahili_Spam_Sms_Prediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Swahili_Spam_Sms_Prediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -161,7 +219,7 @@
                     </div>
                     <h3 class="project-title">Improved SSD</h3>
                     <p class="project-description">Enhanced Single Shot Detector for object detection and recognition</p>
-                    <a href="ImprovedSSD.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/ImprovedSSD.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -173,7 +231,7 @@
                     </div>
                     <h3 class="project-title">Expenses Categorization</h3>
                     <p class="project-description">Machine learning model for automatic expense categorization and budgeting</p>
-                    <a href="ExpensesCategorization.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/ExpensesCategorization.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -185,7 +243,7 @@
                     </div>
                     <h3 class="project-title">Expense Categorization 2</h3>
                     <p class="project-description">Advanced expense categorization with improved accuracy and features</p>
-                    <a href="ExpenseCategorization2.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/ExpenseCategorization2.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -197,7 +255,7 @@
                     </div>
                     <h3 class="project-title">Diabetes Prediction</h3>
                     <p class="project-description">Medical diagnosis model for early diabetes detection using health indicators</p>
-                    <a href="DiabetesPrediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/DiabetesPrediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -209,7 +267,7 @@
                     </div>
                     <h3 class="project-title">BigMart Sales Prediction</h3>
                     <p class="project-description">Retail sales forecasting model for BigMart store performance optimization</p>
-                    <a href="BigMartSalesPrediction.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/BigMartSalesPrediction.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -221,7 +279,7 @@
                     </div>
                     <h3 class="project-title">Housing Price Prediction</h3>
                     <p class="project-description">Real estate price prediction using housing market data and features</p>
-                    <a href="HandsonBook/housing.ipynb" class="project-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/HandsonBook/housing.ipynb" class="project-link">
                         <span>View Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -248,7 +306,7 @@
                         <h3 class="dataset-title">Car Data</h3>
                         <p class="dataset-description">Automotive specifications and pricing data</p>
                     </div>
-                    <a href="Datasets/car data.csv" class="dataset-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Datasets/car%20data.csv" class="dataset-link">
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -261,7 +319,7 @@
                         <h3 class="dataset-title">Sonar Data</h3>
                         <p class="dataset-description">Sonar signals for rock vs mine classification</p>
                     </div>
-                    <a href="Datasets/sonar_data.csv" class="dataset-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Datasets/sonar_data.csv" class="dataset-link">
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -274,7 +332,7 @@
                         <h3 class="dataset-title">Titanic Data</h3>
                         <p class="dataset-description">Passenger information from the Titanic disaster</p>
                     </div>
-                    <a href="Datasets/train.csv" class="dataset-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Datasets/train.csv" class="dataset-link">
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -287,7 +345,7 @@
                         <h3 class="dataset-title">Wine Data</h3>
                         <p class="dataset-description">Red wine quality measurements and ratings</p>
                     </div>
-                    <a href="Datasets/winequality-red.csv" class="dataset-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Datasets/winequality-red.csv" class="dataset-link">
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -300,7 +358,7 @@
                         <h3 class="dataset-title">Tesla Stock Data</h3>
                         <p class="dataset-description">Historical Tesla stock price and volume data</p>
                     </div>
-                    <a href="Datasets/Tesla.csv" class="dataset-link">
+                    <a href="https://github.com/kibali-cell/ML-Projects/blob/main/Datasets/Tesla.csv" class="dataset-link">
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -337,14 +395,198 @@
                 </div>
             </div>
             </div>
-        </section>
+    </section>
+
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Connect</h2>
+                <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                    Interested in collaborating or have questions about my projects? I'd love to hear from you!
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <a href="https://github.com/kibali-cell" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-github text-2xl"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://github.com/kibali-cell/ML-Projects" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fas fa-code text-2xl"></i>
+                        <span>Repository</span>
+                    </a>
+                    <a href="https://github.com/kibali-cell/ML-Projects/issues" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fas fa-comments text-2xl"></i>
+                        <span>Discuss</span>
+                    </a>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h3 class="text-xl font-semibold text-white mb-4">Project Highlights</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-blue-100">
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-chart-line text-blue-300"></i>
+                            <span>13+ Projects</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-database text-blue-300"></i>
+                            <span>6 Datasets</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-code text-blue-300"></i>
+                            <span>100% Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">
-                © 2024 ML Projects Portfolio. Built with passion for machine learning.
-            </p>
-    </div>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">
+                        © 2024 ML Projects Portfolio. Built with passion for machine learning.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/kibali-cell" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://github.com/kibali-cell/ML-Projects" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-code text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden md:hidden">
+        <div class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300" id="mobile-menu-panel">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">ML Portfolio</span>
+                    <button id="close-mobile-menu" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <nav class="space-y-4">
+                    <a href="#projects" class="block text-gray-600 hover:text-blue-600 transition-colors py-2">Projects</a>
+                    <a href="#datasets" class="block text-gray-600 hover:text-blue-600 transition-colors py-2">Datasets</a>
+                    <a href="#about" class="block text-gray-600 hover:text-blue-600 transition-colors py-2">About</a>
+                    <a href="#contact" class="block text-gray-600 hover:text-blue-600 transition-colors py-2">Contact</a>
+                    <button id="mobile-dark-mode-toggle" class="block w-full text-left text-gray-600 hover:text-blue-600 transition-colors py-2">
+                        <i class="fas fa-moon mr-2" id="mobile-dark-mode-icon"></i>Dark Mode
+                    </button>
+                    <a href="https://github.com/kibali-cell/ML-Projects" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-blue-600 transition-colors py-2">
+                        <i class="fab fa-github mr-2"></i>GitHub Repository
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenuPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenuFunc();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        closeMobileMenuFunc();
+                    }
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const mobileDarkModeToggle = document.getElementById('mobile-dark-mode-toggle');
+        const darkModeIcon = document.getElementById('dark-mode-icon');
+        const mobileDarkModeIcon = document.getElementById('mobile-dark-mode-icon');
+        const body = document.body;
+
+        // Check for saved dark mode preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+            mobileDarkModeIcon.classList.remove('fa-moon');
+            mobileDarkModeIcon.classList.add('fa-sun');
+        }
+
+        function toggleDarkMode() {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            
+            // Update icons
+            if (isDark) {
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+                mobileDarkModeIcon.classList.remove('fa-moon');
+                mobileDarkModeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                darkModeIcon.classList.remove('fa-sun');
+                darkModeIcon.classList.add('fa-moon');
+                mobileDarkModeIcon.classList.remove('fa-sun');
+                mobileDarkModeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Add event listeners for both toggle buttons
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
 </body>
 </html>
