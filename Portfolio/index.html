@@ -127,9 +127,29 @@
                     Dive into my machine learning projects covering various domains from finance to healthcare
                 </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                <div class="project-card group">
+
+            <div class="max-w-7xl mx-auto mb-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div class="relative w-full md:max-w-md">
+                        <input id="project-search" type="text" placeholder="Search projects (e.g. regression, NLP, time series)" class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <i class="fas fa-search text-gray-400 absolute right-4 top-1/2 transform -translate-y-1/2"></i>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="predictive">Predictive</button>
+                        <button class="filter-chip" data-filter="classification">Classification</button>
+                        <button class="filter-chip" data-filter="nlp">NLP</button>
+                        <button class="filter-chip" data-filter="vision">Computer Vision</button>
+                        <button class="filter-chip" data-filter="time-series">Time Series</button>
+                        <button class="filter-chip" data-filter="recommender">Recommender</button>
+                        <button class="filter-chip" data-filter="finance">Finance</button>
+                        <button class="filter-chip" data-filter="health">Healthcare</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto" id="projects-grid">
+                <div class="project-card group" data-category="predictive finance" data-keywords="car price regression features sklearn">
                     <div class="project-icon">
                         <i class="fas fa-car text-blue-600"></i>
                     </div>
@@ -141,7 +161,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="classification" data-keywords="sonar classification svm logistic">
                     <div class="project-icon">
                         <i class="fas fa-mountain text-green-600"></i>
                     </div>
@@ -153,7 +173,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="classification health" data-keywords="titanic survival classification exploration">
                     <div class="project-icon">
                         <i class="fas fa-ship text-red-600"></i>
                     </div>
@@ -165,7 +185,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="predictive" data-keywords="wine quality regression gridsearch">
                     <div class="project-icon">
                         <i class="fas fa-wine-glass text-purple-600"></i>
                     </div>
@@ -177,7 +197,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="time-series finance" data-keywords="stock price time series tesla forecasting">
                     <div class="project-icon">
                         <i class="fas fa-chart-line text-orange-600"></i>
                     </div>
@@ -189,7 +209,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="recommender" data-keywords="movie recommendation collaborative filtering">
                     <div class="project-icon">
                         <i class="fas fa-film text-indigo-600"></i>
                     </div>
@@ -201,7 +221,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="nlp" data-keywords="swahili sms spam nlp text classification">
                     <div class="project-icon">
                         <i class="fas fa-sms text-pink-600"></i>
                     </div>
@@ -213,7 +233,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="vision" data-keywords="object detection ssd computer vision">
                     <div class="project-icon">
                         <i class="fas fa-eye text-cyan-600"></i>
                     </div>
@@ -225,7 +245,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="classification finance" data-keywords="expenses categorization classification finance">
                     <div class="project-icon">
                         <i class="fas fa-receipt text-emerald-600"></i>
                     </div>
@@ -237,7 +257,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="classification finance" data-keywords="expenses categorization classification finance advanced">
                     <div class="project-icon">
                         <i class="fas fa-calculator text-teal-600"></i>
                     </div>
@@ -249,7 +269,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="classification health" data-keywords="diabetes prediction health classification">
                     <div class="project-icon">
                         <i class="fas fa-heartbeat text-rose-600"></i>
                     </div>
@@ -261,7 +281,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="predictive retail" data-keywords="bigmart sales prediction regression retail">
                     <div class="project-icon">
                         <i class="fas fa-shopping-cart text-amber-600"></i>
                     </div>
@@ -273,7 +293,7 @@
                     </a>
                 </div>
 
-                <div class="project-card group">
+                <div class="project-card group" data-category="predictive real-estate" data-keywords="housing price prediction regression real estate">
                     <div class="project-icon">
                         <i class="fas fa-home text-slate-600"></i>
                     </div>
@@ -587,6 +607,52 @@
         // Add event listeners for both toggle buttons
         darkModeToggle.addEventListener('click', toggleDarkMode);
         mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+
+        // Projects filtering logic
+        const searchInput = document.getElementById('project-search');
+        const filterChips = document.querySelectorAll('.filter-chip');
+        const projectCards = Array.from(document.querySelectorAll('#projects-grid .project-card'));
+
+        function normalize(text) {
+            return (text || '').toLowerCase();
+        }
+
+        function applyFilters() {
+            const query = normalize(searchInput ? searchInput.value : '');
+            const activeChip = document.querySelector('.filter-chip.active');
+            const activeFilter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category') || '';
+                const keywords = card.getAttribute('data-keywords') || '';
+                const title = card.querySelector('.project-title')?.textContent || '';
+                const description = card.querySelector('.project-description')?.textContent || '';
+
+                const matchesCategory = activeFilter === 'all' || normalize(category).includes(activeFilter);
+                const matchesQuery = !query || [title, description, category, keywords].some(t => normalize(t).includes(query));
+
+                if (matchesCategory && matchesQuery) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+        }
+
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.filter-chip.active').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                applyFilters();
+            });
+        });
+
+        // Initial filter
+        applyFilters();
     </script>
 </body>
 </html>
