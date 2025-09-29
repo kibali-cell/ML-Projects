@@ -163,7 +163,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 
 ## 🌐 Portfolio Website
 
-Visit the interactive portfolio website at: [ML Projects Portfolio](index.html)
+Visit the interactive portfolio website at: [ML Projects Portfolio](https://jonasml.netlify.app/)
 
 ## 📞 Contact
 
