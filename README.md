@@ -1,7 +1,6 @@
 # ML-Projects
 
 Welcome to the **ML-Projects** repository by kibali-cell! This collection features a variety of hands-on machine learning projects with step-by-step tutorials, designed to help learners and developers master data science, deep learning, and AI through practical applications.
-Visit the interactive portfolio website at: [ML Projects Portfolio](https://jonasml.netlify.app/)
 
 ## 🌟 Overview
 
